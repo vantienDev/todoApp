@@ -1,0 +1,116 @@
+@import "normalize.css";
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --color-primary: #999;
+  --background-color-primary: #222;
+  --button-bgcolor: #2a2a2a;
+  --button-color: #555;
+  --done-color: #85bf6b;
+}
+
+h1 {
+  margin: 0;
+}
+
+@mixin d-flex($justify, $align) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+html {
+  font-family: "Rubik", sans-serif;
+  font-size: 62.5%;
+  background-color: var(--background-color-primary);
+}
+
+// reponsive
+.grid {
+  width: 100%;
+  padding: 0;
+}
+
+.grid.wide {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+@media (max-width: 365px) {
+  .header_sourcecode,
+  .header_logo {
+    display: none;
+  }
+  .nav {
+    width: 100% !important;
+  }
+  .content-box {
+    white-space: nowrap;
+    width: 66px !important;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+
+@media (max-width: 640px) {
+  .header_sourcecode {
+    display: none;
+  }
+  .nav {
+    width: 100% !important;
+  }
+  .content-box {
+    white-space: nowrap;
+    width: 66px !important;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+
+@media (max-width: 640px) {
+  .header_sourcecode {
+    display: none;
+  }
+  .nav {
+    width: 100% !important;
+  }
+  .content-box {
+    white-space: nowrap;
+    width: 66px !important;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+@media (max-width: 768px) {
+  .header_sourcecode {
+    display: none;
+  }
+  .nav {
+    width: 50% !important;
+  }
+  .content-box {
+    white-space: nowrap;
+    width: 66px !important;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+
+// tablet - PC low
+@media (min-width: 768px) and (max-width: 1023px) {
+  .nav {
+    width: 45% !important;
+  }
+}
+
+@media (min-width: 1024px) {
+  .nav {
+    width: 40% !important;
+  }
+}

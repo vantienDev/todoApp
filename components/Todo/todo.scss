@@ -1,0 +1,85 @@
+@import "../../globalStyle/globalStyle.scss";
+
+.todo-item {
+  @include d-flex(space-between, center);
+  width: 100%;
+  margin-bottom: 20px;
+  border-bottom: dashed 1px var(--button-color);
+  padding-bottom: 10px;
+
+  .done-btn,
+  .edit-btn,
+  .delete-btn,
+  .close-btn {
+    height: 38px;
+    width: 38px;
+    line-height: 50%;
+    background-color: var(--button-bgcolor);
+    color: var(--button-color);
+    border: 0;
+    border-radius: 50%;
+    margin-right: 10px;
+    svg {
+      font-size: 2rem;
+    }
+
+    &:hover {
+      color: var(--color-primary);
+      cursor: pointer;
+    }
+  }
+
+  .isdone {
+    height: 38px;
+    width: 38px;
+    line-height: 50%;
+    background-color: var(--button-bgcolor);
+    border: 0;
+    border-radius: 50%;
+    color: var(--done-color);
+    margin-right: 10px;
+    svg {
+      font-size: 2rem;
+    }
+  }
+
+  .content {
+    flex: 1 1 0%;
+    padding-right: 15px;
+    height: 38px;
+    line-height: 38px;
+    font-size: 2rem;
+
+    .content-box {
+      width: 100%;
+    }
+
+    .content-box-done {
+      max-width: fit-content;
+      position: relative;
+
+      &::before {
+        content: "";
+        position: absolute;
+        height: 2px;
+        width: 100%;
+        background-color: var(--done-color);
+        top: 50%;
+        border-radius: 3px;
+      }
+    }
+  }
+
+  .input-form {
+    height: 100%;
+    width: 100%;
+    background-color: var(--background-color-primary);
+    border: 0;
+    outline: none;
+    color: #fff;
+  }
+}
+
+.hide {
+  display: none;
+}

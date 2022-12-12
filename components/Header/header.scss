@@ -1,0 +1,45 @@
+@import "../../globalStyle/globalStyle.scss";
+
+.header {
+  @include d-flex(space-between, center);
+  margin-bottom: 65px !important;
+  color: var(--color-primary);
+
+  // title
+  .header_title {
+    padding: 15px 0;
+
+    @include d-flex(space-between, center);
+    .header_logo {
+      margin-right: 10px;
+      border-radius: 50px;
+      width: 50px;
+      height: 50px;
+    }
+
+    h4 {
+      font-size: 3rem;
+      text-decoration: underline;
+    }
+  }
+
+  // source code
+  .header_sourcecode {
+    a {
+      @include d-flex(space-between, center);
+      font-size: 2rem;
+      text-decoration: underline;
+      color: var(--color-primary);
+
+      p {
+        margin-right: 10px;
+        padding-top: 8px;
+      }
+
+      .gitLogo {
+        width: 40px;
+        height: 40px;
+      }
+    }
+  }
+}
