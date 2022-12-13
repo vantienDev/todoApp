@@ -1,10 +1,16 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 module.exports = {
+  mode: "production",
   entry: "./src/index.js", // Dẫn tới file index.js ta đã tạo
   output: {
     path: path.join(__dirname, "/build"), // Thư mục chứa file được build ra
     filename: "bundle.js", // Tên file được build ra
+  },
+  performance: {
+    maxAssetSize: 50000,
+    maxEntrypointSize: 50000,
+    hints: "error",
   },
   module: {
     rules: [
